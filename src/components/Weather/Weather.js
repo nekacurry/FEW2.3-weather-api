@@ -15,14 +15,26 @@ function Weather() {
     const res = await fetch(path)
     const json = await res.json()
 
+    const cod = json.cod
+    const message = json.message
+    if (cod !== 200) {
+      setData({cod,message})
+      return
+    }
+
     const temp = json.main.temp
     const feelsLike = json.main.feels_like
     const description = json.weather[0].description
+    const getIcon = json.weather[0].icon
+    const icon = `http://openweathermap.org/img/wn/${getIcon}@2x.png`
 
     setData({
       temp,
       feelsLike,
       description,
+      icon,
+      cod,
+      message
     })
   }
   // ------------------------------

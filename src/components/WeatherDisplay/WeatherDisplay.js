@@ -1,3 +1,4 @@
+import './WeatherDisplay.css'
 
 function WeatherDisplay(props) {
   const { temp, feelsLike, description, icon, cod, message } = props
@@ -10,9 +11,11 @@ function WeatherDisplay(props) {
 
   return(
     <div className="WeatherDisplay">
-      <img alt='' src={icon}/>
-      <h1>{temp}</h1>
-      <small>Feels Like: {feelsLike}</small>
+      <h1>
+        <img alt='' src={icon}/>
+        <span>{temp}°</span>
+      </h1>
+      <small>feels like: {feelsLike}°</small>
       <p>{description}</p>
     </div>
   )

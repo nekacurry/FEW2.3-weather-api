@@ -1,10 +1,10 @@
-
+import './RadioButton.css'
 
 function RadioButton(props) {
   const { label, name, checked, onChange} = props
 
   return (
-    <label>
+    <label className='RadioButton'>
       <input
         type="radio"
         name={name}

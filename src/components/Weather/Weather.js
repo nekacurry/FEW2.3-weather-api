@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import './Weather.css'
-import RadioButton from '../RadioButton';
+import RadioButton from '../RadioButton/RadioButton';
 import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 
 function Weather() {
@@ -59,9 +59,9 @@ function Weather() {
           value={unit}
           onChange={e => setUnit(e.target.value)}
         >
-          <option value='metric'>Celcius</option>
-          <option value='imperial'>Fahrenheit</option>
-          <option value='standard'>Kelvin</option>
+          <option value='metric'>celsius</option>
+          <option value='imperial'>fahrenheit</option>
+          <option value='standard'>kelvin</option>
         </select>
 
         <RadioButton 
